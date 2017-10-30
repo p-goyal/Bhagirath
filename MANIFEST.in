@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bhagirath *.css
+recursive-include bhagirath *.csv
+recursive-include bhagirath *.html
+recursive-include bhagirath *.ico
+recursive-include bhagirath *.js
+recursive-include bhagirath *.json
+recursive-include bhagirath *.md
+recursive-include bhagirath *.png
+recursive-include bhagirath *.py
+recursive-include bhagirath *.svg
+recursive-include bhagirath *.txt
+recursive-exclude bhagirath *.pyc

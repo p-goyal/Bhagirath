@@ -1,0 +1,25 @@
+{
+ "_liked_by": "[\"Administrator\"]", 
+ "add_total_row": 1, 
+ "apply_user_permissions": 1, 
+ "creation": "2017-10-19 22:18:58.239975", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2017-10-28 11:49:39.843592", 
+ "modified_by": "Administrator", 
+ "module": "Bhagirath", 
+ "name": "Wages Report", 
+ "owner": "Administrator", 
+ "query": "SELECT\n`tabWages Entry`.name as \"ID:Link/Wages Entry:150\",\n`tabWages Entry`.item as \"Item:Link/Item:120\",\n`tabWages Entry`.grade as \"Grade:Data:50\",\n`tabWages Entry`.short as \"Shortage:Float:60\",\n`tabWages Entry Detail`.v_date as \"Voucher Date:Date:90\",\n`tabWages Entry Detail`.employee as \"Employee:Link/Employee:100\",\n`tabWages Entry Detail`.emp_name as \"Employee Name:Link/Employee:150\",\nsum(`tabWages Entry Detail`.wages_meter) as \"Wages Meter:Float:100\",\nsum(`tabWages Entry Detail`.amt) as \"Amount:Currency:100\",\n`tabWages Entry`.beam as \"Beam No:Link/Beam Detail Entry:150\",\n`tabWages Entry`.taka_no as \"Taka No:Data:90\"\n\nFROM `tabWages Entry Detail`\nINNER JOIN `tabWages Entry` ON `tabWages Entry Detail`.parent = `tabWages Entry`.name\nWHERE v_date>=%(from_date)s and v_date<=%(to_date)s\nGROUP BY employee\n\n", 
+ "ref_doctype": "Wages Entry", 
+ "report_name": "Wages Report", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
