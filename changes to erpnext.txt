@@ -1,0 +1,4 @@
+1. Employee: add fields Bank IFSC and Bank Branch
+2. Item add field wages_rate
+3. Stock Entry add quality link field
+4. add Quality Link field everywhere Item is
