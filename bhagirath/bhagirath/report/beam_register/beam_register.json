@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]", 
  "add_total_row": 1, 
  "apply_user_permissions": 1, 
  "creation": "2017-10-22 11:15:10.043339", 
@@ -7,20 +8,12 @@
  "doctype": "Report", 
  "idx": 0, 
  "is_standard": "Yes", 
-<<<<<<< HEAD
- "modified": "2017-11-07 20:48:29.933716", 
-=======
- "modified": "2017-11-07 20:49:35.286287", 
->>>>>>> 777e5354530269accbad80f55d2c1770b8bd8141
+ "modified": "2017-10-28 12:25:52.336567", 
  "modified_by": "Administrator", 
  "module": "Bhagirath", 
  "name": "Beam Register", 
  "owner": "Administrator", 
-<<<<<<< HEAD
- "query": "SELECT\n`tabWages Entry`.beam as \"Beam ID:Link/Beam Detail Entry:150\",\n`tabWages Entry`.item as \"Item:Link/Item:100\",\n`tabWages Entry`.machine as \"Machine:Link/Machine:80\",\n`tabBeam Detail Entry`.warper as \"Warper::100\",\n`tabWages Entry`.beam_no as \"Beam No::50\",\n`tabBeam Detail Entry`.b_len as \"Beam Length:Float:100\",\nsum(`tabWages Entry`.taka_mtr) as \"Produced Mtr:Float:100\",\ncount(`tabWages Entry`.taka_mtr) as \"No of Taka:Data:100\",\nsum(`tabWages Entry`.short) as \"Shortage:Float:100\",\n(`tabBeam Detail Entry`.b_len-sum(`tabWages Entry`.short+`tabWages Entry`.taka_mtr)) as \"Bal Mtr:Float:100\"\nFROM `tabWages Entry`, `tabBeam Detail Entry`\nWHERE `tabWages Entry`.beam = `tabBeam Detail Entry`.name\nGROUP by Warper\n", 
-=======
- "query": "SELECT\n`tabWages Entry`.beam as \"Beam ID:Link/Beam Detail Entry:150\",\n`tabWages Entry`.item as \"Item:Link/Item:100\",\n`tabWages Entry`.machine as \"Machine:Link/Machine:80\",\n`tabBeam Detail Entry`.warper as \"Warper::100\",\n`tabWages Entry`.beam_no as \"Beam No::50\",\n`tabBeam Detail Entry`.b_len as \"Beam Length:Float:100\",\nsum(`tabWages Entry`.taka_mtr) as \"Produced Mtr:Float:100\",\ncount(`tabWages Entry`.taka_mtr) as \"No of Taka:Data:100\",\nsum(`tabWages Entry`.short) as \"Shortage:Float:100\",\n(`tabBeam Detail Entry`.b_len-sum(`tabWages Entry`.short+`tabWages Entry`.taka_mtr)) as \"Bal Mtr:Float:100\"\nFROM `tabWages Entry`, `tabBeam Detail Entry`\nWHERE `tabWages Entry`.beam = `tabBeam Detail Entry`.name\nGROUP by Warper", 
->>>>>>> 777e5354530269accbad80f55d2c1770b8bd8141
+ "query": "SELECT\n`tabWages Entry`.beam as \"Beam ID:Link/Beam Detail Entry:150\",\n`tabWages Entry`.item as \"Item:Link/Item:100\",\n`tabWages Entry`.machine as \"Machine:Link/Machine:80\",\n`tabBeam Detail Entry`.warper as \"Warper::100\",\n`tabWages Entry`.beam_no as \"Beam No::50\",\n`tabBeam Detail Entry`.b_len as \"Beam Length:Float:100\",\nsum(`tabWages Entry`.taka_mtr) as \"Produced Mtr:Float:100\",\ncount(`tabWages Entry`.taka_mtr) as \"No of Taka:Data:100\",\nsum(`tabWages Entry`.short) as \"Shortage:Float:100\",\n(`tabWages Entry`.b_len-sum(`tabWages Entry`.short+`tabWages Entry`.taka_mtr)) as \"Bal Mtr:Float:100\"\nFROM `tabWages Entry`, `tabBeam Detail Entry`\nWHERE `tabWages Entry`.beam = `tabBeam Detail Entry`.name\nGROUP by Warper", 
  "ref_doctype": "Wages Entry", 
  "report_name": "Beam Register", 
  "report_type": "Query Report", 
