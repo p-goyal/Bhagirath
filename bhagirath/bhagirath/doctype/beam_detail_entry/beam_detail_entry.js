@@ -33,4 +33,15 @@ frappe.ui.form.on("Beam Detail Entry", "validate", function(frm) {
 frappe.ui.form.on("Beam Detail Entry", "machine", function(frm) {
 	
 	frm.set_df_property("machine", "read_only", frm.doc.__islocal ? 0 : 1);
+	
+});
+
+frappe.ui.form.on("Beam Detail Entry", "onload", function(frm) {
+	frm.fields_dict['quality'].get_query = function(doc) {
+		return{	
+			filters:[
+				['Item', '=', frm.doc.item]
+			]
+		}
+	}
 });
